@@ -199,4 +199,10 @@
   padding: 1rem 1.5rem;
   height: 100%;
 }
+
+@media screen and (min-width: 480px) {
+  .popular {
+    padding-top: 10rem;
+  }
+}
 /*# sourceMappingURL=popular.css.map */

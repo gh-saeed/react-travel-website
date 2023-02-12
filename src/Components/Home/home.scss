@@ -12,7 +12,7 @@
 }
 
 .home {
-    height: 81vh;
+    height: 85vh;
     background: linear-gradient(
             rgba(33, 33, 33, 0.522),
             rgba(33, 33, 33, 0.522)
@@ -107,6 +107,45 @@
                 padding: 0.6rem 1.5rem;
                 color: var(--whiteColor);
                 font-weight: 600;
+            }
+        }
+    }
+}
+
+
+
+// Media
+@media screen and (min-width: 480px) {
+    .home {
+        .setContainer{
+            .homeCard {
+                bottom: -100px;
+                width: 90%;
+                grid-template-columns: repeat(2, 1fr);
+
+                .btn {
+                    transform: translateY(15px);
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 556px) {
+    .home {
+
+        .setContainer {
+
+            .homeText {
+
+                .title {
+                    font-size: 2.5rem;
+                }
+
+                .subTitle {
+                    font-size: 18px;
+                }
             }
         }
     }

@@ -12,7 +12,7 @@
 }
 
 .home {
-  height: 81vh;
+  height: 85vh;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(33, 33, 33, 0.522)), to(rgba(33, 33, 33, 0.522))), url("../../Assets/images/pexels-elvin-muradzade-15265348.jpg");
   background: linear-gradient(rgba(33, 33, 33, 0.522), rgba(33, 33, 33, 0.522)), url("../../Assets/images/pexels-elvin-muradzade-15265348.jpg");
   background-position: center;
@@ -146,5 +146,27 @@
   padding: 0.6rem 1.5rem;
   color: var(--whiteColor);
   font-weight: 600;
+}
+
+@media screen and (min-width: 480px) {
+  .home .setContainer .homeCard {
+    bottom: -100px;
+    width: 90%;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .home .setContainer .homeCard .btn {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+}
+
+@media screen and (min-width: 556px) {
+  .home .setContainer .homeText .title {
+    font-size: 2.5rem;
+  }
+  .home .setContainer .homeText .subTitle {
+    font-size: 18px;
+  }
 }
 /*# sourceMappingURL=home.css.map */
