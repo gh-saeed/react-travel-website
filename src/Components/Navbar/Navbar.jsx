@@ -72,7 +72,7 @@ const Navbar = () => {
                                 <a href="#">Login</a>
                             </button>
 
-                            <button className="btn loginBtn">
+                            <button className="btn ">
                                 <a href="#">Sign Up</a>
                             </button>
                         </div>

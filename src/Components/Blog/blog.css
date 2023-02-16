@@ -74,4 +74,11 @@
   -webkit-transform: translateY(5px);
           transform: translateY(5px);
 }
+
+@media screen and (min-width: 884px) {
+  .blog .mainContainer {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
 /*# sourceMappingURL=blog.css.map */
