@@ -14,9 +14,9 @@ const Footer = () => {
 
     return (
         <div className="footer">
-            <div className="secContainer container grid">
-                <div data-aos="fade-up" data-aos-duration="2000" className="logoDiv">
-                    <div data-aos="fade-up" data-aos-duration="2000" className="footerLogo">
+            <div data-aos="fade-up" data-aos-duration="3000" className="secContainer container grid">
+                <div  className="logoDiv">
+                    <div  className="footerLogo">
                         <a href="#" className="logo flex">
                             <h1 className="flex">
                                 <SiYourtraveldottv className="icon" /> Dot
@@ -24,14 +24,14 @@ const Footer = () => {
                         </a>
                     </div>
 
-                    <div data-aos="fade-up" data-aos-duration="3000" className="socials flex">
+                    <div  className="socials flex">
                         <ImFacebook className="icon" />
                         <ImTwitter className="icon" />
                         <AiFillInstagram className="icon" />
                     </div>
                 </div>
 
-                <div data-aos="fade-up" data-aos-duration="3000" className="footerLinks">
+                <div  className="footerLinks">
                     <span className="linkTitle">Information</span>
                     <li>
                         <a href="#">Home</a>
@@ -48,7 +48,7 @@ const Footer = () => {
                     </li>
                 </div>
 
-                <div data-aos="fade-up" data-aos-duration="4000" className="footerLinks">
+                <div  className="footerLinks">
                     <span className="linkTitle">Helpful Links</span>
                     <li>
                         <a href="#">Destination</a>
@@ -65,7 +65,7 @@ const Footer = () => {
                     </li>
                 </div>
 
-                <div data-aos="fade-up" data-aos-duration="5000" className="footerLinks">
+                <div  className="footerLinks">
                     <span className="linkTitle">Contact us</span>
                     <span className="phone">+999 999 9999</span>
                     <span className="email">travel@travel.com</span>
