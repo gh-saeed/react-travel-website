@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./offers.css";
 import {
     MdKingBed,
@@ -13,6 +13,9 @@ import img from "../../Assets/images/1.jpg";
 import img8 from "../../Assets/images/8.jpg";
 import img6 from "../../Assets/images/6.jpg";
 import img3 from "../../Assets/images/3.jpg";
+
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const offersData = [
     {
@@ -41,10 +44,14 @@ const offersData = [
 ];
 
 const Offers = () => {
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, []);
+
     return (
         <section className="offer container section">
             <div className="secContianer">
-                <div className="secIntro">
+                <div data-aos="fade-up" data-aos-duration="2000" className="secIntro">
                     <h2 className="secTitle">Special Offer</h2>
                     <p>
                         From historical cities to natural specteculars, com see
@@ -55,9 +62,12 @@ const Offers = () => {
                 <div className="mainContent grid">
                     {offersData.map((offer, i) => {
                         return (
-                            <div className="singleOffer" key={i}>
+                            <div data-aos="fade-up" data-aos-duration="3000" className="singleOffer" key={i}>
                                 <div className="destImage">
-                                    <img src={offer.imgSrc} alt={offer.destTitle} />
+                                    <img
+                                        src={offer.imgSrc}
+                                        alt={offer.destTitle}
+                                    />
 
                                     <span className="discount">30% off</span>
                                 </div>
@@ -92,7 +102,9 @@ const Offers = () => {
 
                                     <div className="location flex">
                                         <MdLocationOn className="icon" />
-                                        <small>450 Vine #310, {offer.location}</small>
+                                        <small>
+                                            450 Vine #310, {offer.location}
+                                        </small>
                                     </div>
 
                                     <button className="btn flex">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./popular.css";
 import { BsArrowLeftShort, BsArrowRightShort, BsDot } from "react-icons/bs";
 
@@ -7,6 +7,9 @@ import img2 from "../../Assets/images/2.jpg";
 import img5 from "../../Assets/images/5.jpg";
 import img7 from "../../Assets/images/7.jpg";
 import img9 from "../../Assets/images/9.jpg";
+
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Data = [
     {
@@ -43,11 +46,15 @@ const Data = [
 ];
 
 const Popular = () => {
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, []);
+
     return (
         <section className="popular section container">
             <div className="secContainer">
                 <div className="secHeader flex">
-                    <div className="textDiv">
+                    <div data-aos="fade-right" data-aos-duration="2500" className="textDiv">
                         <h2 className="secTitle">Popular Destiantion</h2>
                         <p>
                             From historycal cities to natural specteculars, come
@@ -55,7 +62,7 @@ const Popular = () => {
                         </p>
                     </div>
 
-                    <div className="iconsDiv flex">
+                    <div data-aos="fade-left" data-aos-duration="2500" className="iconsDiv flex">
                         <BsArrowLeftShort className="icon leftIcon" />
                         <BsArrowRightShort className="icon" />
                     </div>
@@ -64,7 +71,7 @@ const Popular = () => {
                 <div className="mainContent grid">
                     {Data.map((d, i) => {
                         return (
-                            <div className="singleDestination" key={i}>
+                            <div data-aos="fade-up"className="singleDestination" key={i}>
                                 <div className="destImage">
                                     <img
                                         src={d.imgSrc}

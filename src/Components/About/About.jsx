@@ -1,20 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./about.css";
 
 import img from "../../Assets/images/customer.png";
 import img2 from "../../Assets/images/Mountains.jpg";
 import img3 from "../../Assets/images/Hikings.png";
 
-import video from "../../Assets/images/video.mp4"
+import video from "../../Assets/images/video.mp4";
+
+
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, []);
+
     return (
         <section className="about section">
             <div className="secContainer">
                 <h2 className="title">Why Hikings?</h2>
 
                 <div className="mainContent container grid">
-                    <div className="singleItem">
+                    <div data-aos="fade-up" data-aos-duration="2000" className="singleItem">
                         <img src={img2} alt="" />
                         <h3>100+ Mountains</h3>
 
@@ -25,7 +33,7 @@ const About = () => {
                         </p>
                     </div>
 
-                    <div className="singleItem">
+                    <div data-aos="fade-up" data-aos-duration="2500" className="singleItem">
                         <img src={img3} alt="" />
                         <h3>1000+ Hikings</h3>
 
@@ -36,7 +44,7 @@ const About = () => {
                         </p>
                     </div>
 
-                    <div className="singleItem">
+                    <div data-aos="fade-up" data-aos-duration="3000" className="singleItem">
                         <img src={img} alt="" />
                         <h3>2000+ Customer</h3>
 
@@ -48,9 +56,9 @@ const About = () => {
                     </div>
                 </div>
 
-                <div className="videoCard container">
+                <div  className="videoCard container">
                     <div className="cardContent grid">
-                        <div className="carText">
+                        <div data-aos="fade-right" data-aos-duration="2000" className="carText">
                             <h2>Wonderfull Hour experience in there!</h2>
                             <p>
                                 The Advanture subranking is based on anequally
@@ -58,8 +66,14 @@ const About = () => {
                             </p>
                         </div>
 
-                        <div className="cardVideo">
-                            <video src={video} autoPlay loop muted type="video/mp4"></video>
+                        <div data-aos="fade-left" data-aos-duration="2000" className="cardVideo">
+                            <video
+                                src={video}
+                                autoPlay
+                                loop
+                                muted
+                                type="video/mp4"
+                            ></video>
                         </div>
                     </div>
                 </div>
